@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Қазақ зиялылары • XX ғасыр басы</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#2a1d12;--paper:#f3e6c8;--red:#9c2a1e;--gold:#b8862b}
+html{scroll-snap-type:y proximity;scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper);
+ background-image:radial-gradient(#0000 60%,#6b4a1f33),repeating-linear-gradient(0deg,#0000 0 3px,#5a3d1a08 3px 4px)}
+header{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--paper);text-align:center;padding:8px 10px;border-bottom:4px double var(--gold);font-variant:small-caps;letter-spacing:2px}
+header b{font-size:clamp(20px,4vw,34px);letter-spacing:8px}
+header small{display:block;font-size:12px;opacity:.8}
+#prog{position:fixed;top:0;left:0;height:4px;background:var(--red);z-index:30;width:0}
+section{min-height:100vh;scroll-snap-align:start;padding:40px 20px 50px;max-width:1100px;margin:auto;display:flex;flex-direction:column;justify-content:center}
+.no{font-size:14px;letter-spacing:3px;color:var(--red);border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:4px 0;margin-bottom:12px;display:flex;justify-content:space-between}
+h1{font-size:clamp(34px,8vw,78px);line-height:1;text-transform:uppercase;margin:6px 0 14px}
+h2{font-size:clamp(26px,5.5vw,46px);margin-bottom:14px;position:relative;display:inline-block}
+h2::after{content:"";position:absolute;left:0;bottom:-4px;height:4px;width:0;background:var(--red);transition:width 1.1s .3s}
+.show h2::after,.show h1+*{width:100%}
+.show h2::after{width:100%}
+p,li{font-size:clamp(16px,2.4vw,21px);line-height:1.6}
+.cols{column-count:2;column-gap:30px;column-rule:1px solid #2a1d1255}
+@media(max-width:700px){.cols{column-count:1}}
+.rv{opacity:0;transform:translateY(40px) rotate(-.6deg);transition:1s cubic-bezier(.2,.8,.2,1)}
+.show .rv{opacity:1;transform:none}
+.show .rv:nth-child(3){transition-delay:.15s}.show .rv:nth-child(4){transition-delay:.3s}.show .rv:nth-child(5){transition-delay:.45s}.show .rv:nth-child(6){transition-delay:.6s}
+.box{border:2px solid var(--ink);padding:14px 16px;margin:9px 0;background:#fff6dd99;box-shadow:5px 5px 0 var(--ink);transition:.3s}
+.box:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--red)}
+.box b{color:var(--red)}
+.yr{display:inline-block;background:var(--red);color:var(--paper);padding:1px 10px;margin-right:8px;font-weight:bold;transform:rotate(-2deg)}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+td,th{border:2px solid var(--ink);padding:9px;font-size:clamp(15px,2.2vw,19px)}
+th{background:var(--ink);color:var(--paper)}
+tr{transition:.3s}tr:hover td{background:#b8862b44}
+.stamp{position:absolute;right:16px;top:24px;border:4px solid var(--red);color:var(--red);padding:4px 14px;font-weight:bold;letter-spacing:3px;transform:rotate(12deg) scale(3);opacity:0;transition:.5s;font-size:clamp(14px,3vw,24px);pointer-events:none}
+.show .stamp{transform:rotate(12deg) scale(1);opacity:.85;transition-delay:.7s}
+.seal{position:absolute;right:20px;bottom:20px;font-size:70px;animation:sp 12s linear infinite;opacity:.5}
+@keyframes sp{to{transform:rotate(360deg)}}
+.flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:10px}
+.fl{perspective:900px;height:240px;cursor:pointer}
+.fi{position:relative;width:100%;height:100%;transition:.8s;transform-style:preserve-3d}
+.fl.f .fi{transform:rotateY(180deg)}
+.fa,.fb{position:absolute;inset:0;backface-visibility:hidden;border:3px solid var(--ink);padding:14px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.fa{background:var(--ink);color:var(--paper)}
+.fa span{font-size:50px}.fa b{font-size:20px;margin-top:6px}.fa small{color:var(--gold)}
+.fb{background:#fff6dd;transform:rotateY(180deg);font-size:15px;line-height:1.45;text-align:left;overflow:auto}
+.fb em{color:var(--red);font-style:normal;font-weight:bold}
+.tip{font-size:13px;color:var(--red);margin-top:8px}
+.q h2{font-size:clamp(20px,3.8vw,30px)}
+.opt{display:block;width:100%;text-align:left;font:inherit;font-size:clamp(15px,2.3vw,19px);margin:8px 0;padding:12px 14px;border:2px solid var(--ink);background:#fff6dd;color:var(--ink);cursor:pointer;transition:.25s}
+.opt:hover{background:var(--gold);color:#fff;transform:translateX(8px)}
+.opt.ok{background:#2f7a3d;color:#fff;border-color:#1a4a24}
+.opt.no{background:var(--red);color:#fff;animation:sh .4s}
+.opt.lk{pointer-events:none}
+@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.fbk{min-height:26px;margin-top:8px;font-weight:bold}
+.lv{color:var(--red);letter-spacing:2px;font-size:13px}
+#sc{font-size:clamp(70px,16vw,150px);color:var(--red);font-weight:bold;text-align:center}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:40;width:100%;height:100%}
+</style>
+</head>
+<body>
+<div id="prog"></div><canvas id="cv"></canvas>
+<header><b>ҚАЗАҚ</b><small>Тарих газеті • 8-сынып • XX ғасырдың басы</small></header>
+
+<section>
+  <div class="no rv"><span>№ 1</span><span>§ 8–9</span><span>1900–1917</span></div>
+  <h1 class="rv">Қазақ зиялылары</h1>
+  <p class="rv">XX ғасырдың басындағы қазақ зиялыларының көрнекті өкілдері ұлттық мүдделерді қалай қорғады?</p>
+  <div class="stamp">АЛАШ</div>
+  <table class="rv"><tr><th>Қазақша</th><th>Орысша</th><th>Ағылшынша</th></tr>
+   <tr><td>Зиялы</td><td>Интеллигенция</td><td>Intelligentsia</td></tr>
+   <tr><td>Реакция</td><td>Реакция</td><td>Reaction</td></tr>
+   <tr><td>Қара жүздік</td><td>Черносотенцы</td><td>Black hundred</td></tr></table>
+  <p class="rv tip">↓ Төмен жылжыт</p><div class="seal">☪</div>
+</section>
+
+<section>
+  <div class="no rv"><span>№ 2</span><span>САЯСИ ҚОЗҒАЛЫС</span></div>
+  <h2 class="rv">1. Саяси қозғалыстың күшеюі</h2>
+  <div class="cols rv"><p>1905–1907 жылдардағы төңкеріс қазақ қоғамына да әсер етті. Қазақ зиялылары халықтың жер, оқу-білім, құқық мәселелерін көтеріп, үкіметке талап қоя бастады. Бұл күрес патша өкіметінің отарлау саясатына және <b>реакциялық күштерге</b> (қара жүздіктерге) қарсы бағытталды.</p></div>
+  <div class="box rv"><span class="yr">1905</span>Қарқаралы петициясы: жер мәселесі мен халықтың құқығын қорғау талаптары.</div>
+  <div class="box rv"><span class="yr">1906</span>Қазақ өкілдері Бірінші Мемлекеттік Думаға қатысты, ұлттың мүддесін жариялы түрде көтерді.</div>
+  <div class="box rv"><b>Қара жүздіктер</b> – патшаны және отарлық тәртіпті қорғаған, реформа мен ұлттық қозғалысқа қарсы шыққан реакциялық ұйымдар.</div>
+</section>
+
+<section>
+  <div class="no rv"><span>№ 3</span><span>БАСПАСӨЗ</span></div>
+  <h2 class="rv">2. Ұлт сөзі: газет пен журнал</h2>
+  <div class="box rv"><span class="yr">1911–1915</span><b>«Айқап»</b> журналы – Троицк қаласында шықты. Бас редакторы – <b>Мұхамеджан Сералин</b>. Қазақ тілінде шыққан алғашқы журналдардың бірі.</div>
+  <div class="box rv"><span class="yr">1913–1918</span><b>«Қазақ»</b> газеті – Орынборда шықты. Редакторы – <b>Ахмет Байтұрсынұлы</b>, ең жақын серіктері – <b>Әлихан Бөкейхан</b> мен <b>Міржақып Дулатұлы</b>.</div>
+  <p class="rv">Баспасөз халықты оятып, ана тілін, білім мен мәдениетті қорғап, ұлттық сананы қалыптастырды.</p>
+  <div class="seal">✒</div>
+</section>
+
+<section>
+  <div class="no rv"><span>№ 4</span><span>ТҰЛҒАЛАР</span></div>
+  <h2 class="rv">3. Көрнекті өкілдер</h2>
+  <p class="rv tip" style="margin-top:0">Картаны басып, бұрыңыз 👆</p>
+  <div class="flips rv">
+   <div class="fl"><div class="fi"><div class="fa"><span>🕊</span><b>Әлихан Бөкейхан</b><small>1866–1937</small></div><div class="fb"><em>Алаш қозғалысының көсемі.</em> Ғалым, қоғам қайраткері. Бірінші Мемлекеттік Думаға сайланды. 1917 жылы Алаш партиясын басқарды.</div></div></div>
+   <div class="fl"><div class="fi"><div class="fa"><span>📰</span><b>Ахмет Байтұрсынұлы</b><small>1872–1937</small></div><div class="fb"><em>Қазақ» газетінің редакторы.</em> Ақын, ағартушы, ғалым. «Қырық мысал» (1909), «Маса» (1911) жинақтарының авторы. Қазақ тілінің әліпбиін жетілдірді.</div></div></div>
+   <div class="fl"><div class="fi"><div class="fa"><span>📣</span><b>Міржақып Дулатұлы</b><small>1885–1935</small></div><div class="fb"><em>«Оян, қазақ!»</em> (1909) жинағының авторы. «Бақытсыз Жамал» (1910) – қазақтың тұңғыш романы. «Қазақ» газетінің қызметкері.</div></div></div>
+   <div class="fl"><div class="fi"><div class="fa"><span>⚕</span><b>Халел Досмұхамедов</b><small>1883–1939</small></div><div class="fb"><em>Дәрігер, ағартушы,</em> Алаш қозғалысының қайраткері. Халық денсаулығы мен білімі жайында жазды.</div></div></div>
+   <div class="fl"><div class="fi"><div class="fa"><span>📖</span><b>Мұхамеджан Сералин</b><small>«Айқап» редакторы</small></div><div class="fb"><em>«Айқап» журналының</em> негізін қалаушы және бас редакторы (Троицк, 1911–1915).</div></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="no rv"><span>№ 5</span><span>АЛАШ</span></div>
+  <h2 class="rv">4. Зиялылардың үлесі мен маңызы</h2>
+  <div class="box rv"><span class="yr">1909</span>«Оян, қазақ!» және «Қырық мысал» жарық көрді – ұлттық сананы оятты.</div>
+  <div class="box rv"><span class="yr">1910</span>«Бақытсыз Жамал» – қазақ әдебиетіндегі тұңғыш роман.</div>
+  <div class="box rv"><span class="yr">1917</span>Алаш партиясы құрылды, ұлттық автономия идеясы көтерілді.</div>
+  <div class="box rv">🎯 Басты мақсаттары: <b>жер, білім, ана тілі, құқық және ұлттың бостандығы</b>. Алаш қайраткерлері кейін саяси қуғын-сүргінге ұшырады.</div>
+</section>
+
+<section class="q" data-q="0"></section>
+<section class="q" data-q="1"></section>
+<section class="q" data-q="2"></section>
+
+<section>
+  <div class="no rv"><span>НӘТИЖЕ</span></div>
+  <h2 class="rv">🏆 Тест аяқталды</h2>
+  <div id="sc" class="rv">0/3</div>
+  <p id="rt" class="rv" style="text-align:center"></p>
+</section>
+
+<script>
+const Q=[
+{q:"«Қазақ» газеті туралы дұрыс тұжырымды таңдаңыз.",o:["1913–1918 жылдары Орынборда шықты, редакторы – А. Байтұрсынұлы","1911 жылы Троицкіде шықты, редакторы – М. Сералин","1905 жылы Қарқаралыда шықты, редакторы – Ә. Бөкейхан","1909 жылы Уфада шықты, редакторы – М. Дулатұлы"],a:0,e:"«Қазақ» – Орынборда (1913–1918) шыққан, редакторы А. Байтұрсынұлы. Троицкіде «Айқап» шықты."},
+{q:"Оқиғаларды дұрыс хронологиялық ретпен орналастырыңыз: 1) «Айқап» журналының шығуы 2) Алаш партиясының құрылуы 3) Қарқаралы петициясы 4) «Қазақ» газетінің шығуы 5) «Оян, қазақ!» жинағы.",o:["3 → 5 → 1 → 4 → 2","3 → 1 → 5 → 4 → 2","5 → 3 → 1 → 2 → 4","3 → 5 → 4 → 1 → 2"],a:0,e:"1905 – Қарқаралы петициясы; 1909 – «Оян, қазақ!»; 1911 – «Айқап»; 1913 – «Қазақ»; 1917 – Алаш партиясы."},
+{q:"Қай тұлға мен қызмет жұбы ҚАТЕ көрсетілген?",o:["А. Байтұрсынұлы – «Қырық мысал» жинағының авторы","М. Дулатұлы – «Бақытсыз Жамал» романының авторы","М. Сералин – «Қазақ» газетінің редакторы","Ә. Бөкейхан – Алаш қозғалысының көсемі"],a:2,e:"М. Сералин «Айқап» журналының редакторы болған. «Қазақ» газетін А. Байтұрсынұлы басқарды."}
+];
+let sc=0,dn=0;const L=['A','Ә','Б','В'];
+document.querySelectorAll('.q').forEach(s=>{
+ const z=Q[+s.dataset.q];
+ s.innerHTML=`<div class="no rv"><span>СҰРАҚ ${+s.dataset.q+1}/3</span><span class="lv">★★★ КҮРДЕЛІ</span></div><h2 class="rv">${z.q}</h2><div class="rv"></div><div class="fbk rv"></div>`;
+ const box=s.children[2],fb=s.children[3];
+ z.o.forEach((t,k)=>{const b=document.createElement('button');b.className='opt';b.textContent=L[k]+') '+t;
+  b.onclick=()=>{box.querySelectorAll('.opt').forEach(x=>x.classList.add('lk'));
+   if(k===z.a){b.classList.add('ok');sc++;boom();fb.textContent='✔ Дұрыс! '+z.e}
+   else{b.classList.add('no');box.children[z.a].classList.add('ok');fb.textContent='✘ Қате. '+z.e}
+   if(++dn===3){sc3()}};
+  box.appendChild(b)})
+});
+function sc3(){document.getElementById('sc').textContent=sc+'/3';
+ document.getElementById('rt').textContent=sc==3?'Тамаша! Сен нағыз тарихшысың! 🔥':sc==2?'Жақсы! Тақырыпты тағы қарап шық.':'Тақырыпты қайталап, қайта байқап көр!'}
+document.querySelectorAll('.fl').forEach(f=>f.onclick=()=>f.classList.toggle('f'));
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:.2});
+document.querySelectorAll('section').forEach(s=>io.observe(s));
+onscroll=()=>{const h=document.documentElement;document.getElementById('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'};
+const cv=document.getElementById('cv'),g=cv.getContext('2d');let P=[];
+function rs(){cv.width=innerWidth;cv.height=innerHeight}rs();onresize=rs;
+function boom(){for(let i=0;i<80;i++)P.push({x:innerWidth/2,y:innerHeight/2,vx:(Math.random()-.5)*14,vy:(Math.random()-.9)*13,l:80,h:Math.random()*60+20,s:Math.random()*5+3})}
+(function f(){g.clearRect(0,0,cv.width,cv.height);P=P.filter(p=>p.l>0);P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.3;p.l--;g.fillStyle=`hsl(${p.h},80%,50%)`;g.fillRect(p.x,p.y,p.s,p.s*1.5)});requestAnimationFrame(f)})();
+</script>
+</body>
+</html>
